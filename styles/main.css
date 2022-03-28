@@ -1,12 +1,14 @@
 /*global*/
+:root{
+    --primary: #ffcc00;
+}
 body{
     font-family: 'Lato', sans-serif;
+    background-color: black;
 }
-
 p{
     line-height: 2;
-}
-    
+} 
 img{
     max-width: 100%;
 }
@@ -17,7 +19,60 @@ p.read-btn{
     font-size: 13px;
     font-weight: 700;
 }
-    
-
-
 /*nav*/
+.navigation-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: white;
+}
+.menu{
+    flex-basis: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ng-logo,.link-search,.link-renew,.link-menu{
+    display: none;
+    
+}
+.ng-logo-border{
+    width: 20px;
+    height: 30px;
+    padding: 10px;
+}
+.link-login{
+    text-transform: uppercase;
+    font-size: 15px;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.link-subs{
+    background-color: black;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 15px;
+}
+.link-subs:hover{
+    color: black;
+    background-color: var(--primary);
+}
+.link-arrows{
+    color: black;
+    margin-right: 20px;
+}
+/*header*/
+header{
+    color: white;
+}
+h1{
+    text-transform: uppercase;
+}
+.border{
+    
+}
