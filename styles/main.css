@@ -69,10 +69,24 @@ p.read-btn{
 /*header*/
 header{
     color: white;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
 }
 h1{
     text-transform: uppercase;
 }
+.paragraph-word span{
+    border-bottom: 4px solid rgb(255, 217, 0);
+    width: 30px;
+    margin-right: auto;
+    margin-left: auto;    
+}
 .border{
+    border-bottom: 4px solid rgb(255, 217, 0);
+    width: 30px;
+    margin-right: auto;
+    margin-left: auto;
     
 }
