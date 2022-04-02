@@ -39,6 +39,16 @@ p.read-btn{
     margin-left: auto;
     margin-right: auto;
 }
+@media(min-width:768px){
+    .container{
+        width: 75%; 
+    }     
+}
+.flex-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 /*nav*/
 .navigation-bar{
     display: flex;
@@ -48,14 +58,13 @@ p.read-btn{
     background-color: white;
 }
 .menu{
-    flex-basis: 250px;
     display: flex;
+    flex-basis: 250px;
     justify-content: space-between;
     align-items: center;
 }
 .ng-logo,.link-search,.link-renew,.link-menu{
-    display: none;
-    
+    display: none;   
 }
 .ng-logo-border{
     width: 20px;
@@ -79,13 +88,59 @@ p.read-btn{
     padding: 15px;
 }
 .link-subs:hover{
+    background-position: 0% 0;
+    color: black;
+}
+.link-subs:hover{
     color: black;
     background-color: var(--primary);
 }
-.link-arrows{
+.link-arrows i{
     color: black;
     margin-right: 20px;
 }
+
+@media(min-width:768px){
+    .menu{
+        flex-basis: 450px;
+    }
+}
+    .ng-logo,.link-search,.link-renew,.link-menu{
+        display: block;
+    }
+    .ng-logo-border{
+        display: none;
+    }
+    .ng-logo{
+        width: 110px;
+        margin-left: 20px;
+    }
+    .link-search{
+        color: black;
+    }
+    .link-renew{
+        color: black;
+        font-weight: normal;
+        text-transform: capitalize;
+        border-bottom: 2px solid var(--primary);
+        background-size: 100% 200%;
+        background-image: linear-gradient(to bottom, #fff 50%, var(--primary) 50%);
+        transition: background-position .2 ease-in-out, color .2 ease-in-out;    
+     }
+     .link-renew:hover{
+         background-position: 0 100%;;
+         color: black;
+         cursor: pointer;
+     }
+     .link-menu{
+         text-transform: uppercase;
+         font-size: 15px;
+         color: black;
+         font-weight: 700;
+         letter-spacing: 3px;
+     }
+
+
 /*header*/
 header{
     color: white;
@@ -126,10 +181,9 @@ h1{
 .main-news-img img{
     height: 100%;
 }
-
 .main-news-text{
     position: absolute;/*the child should be absolute*/
-    top: 50px;
+    top: 120px;
     left: 20px;
 }
 .main-news-text p.title{
@@ -147,10 +201,6 @@ h1{
 .secondary-news{
     margin-bottom: 20px;
 }
-.secondary-news-img{
-
-}
-
 .secondary-news-text{
     background-color: white;
     padding: 10px;
@@ -158,16 +208,35 @@ h1{
 }
 .secondary-news-text h3{
     color: gray;
-    padding-bottom: 0;
+    padding-bottom:0;
 }
 .secondary-news-text h3 span{
     font-weight: 300;
 }
 .secondary-news-text p.title{
     font-size: 24px;
-    font-weight: 700;
-    
+    font-weight: 700;  
 }
+@media(min-width:768px){
+    .secondary-news-container{
+        display: flex;
+        justify-content: space-between;
+        width:40rem;
+    }
+    .secondary-news{
+        width: calc(50% - 1rem);
+        height: 25rem;
+    }
+    .main-news{
+        width: 100%;
+    }
+    .secondary-news-img img{
+        width: 100%;
+        height: 12rem;       
+    }
+}
+    
+
 /*today's picks*/
 .pick-item{
     display: grid;
@@ -186,4 +255,20 @@ h1{
 }
 .picks-text p:hover{
     text-decoration: underline;
+}
+.more{
+    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-size: 100% 200%;
+    
+}
+.border{
+    border-bottom: 4px solid rgb(255, 217, 0);
+    width: 50px;
+}
+.more:hover{
+    background-position: 0 100;
+    background-color: #ffcc00;
+    cursor: pointer;
 }
